@@ -1,0 +1,53 @@
+header {
+    display       : grid;
+    grid-auto-flow: column;
+    place-items   : center;
+    padding       : 35px 0px;
+}
+
+
+#logo {
+    display         : grid;
+    justify-self    : start;
+    place-items     : center;
+    width           : 30px;
+    height          : 30px;
+    background-color: white;
+    border-radius   : 35%;
+
+    >img {
+        width: 55%;
+    }
+}
+
+#profile {
+    justify-self: end;
+    height      : 30px;
+
+    >img {
+        display      : inline-block;
+        width        : 30px;
+        border-radius: 100%;
+    }
+}
+
+#location-container {
+    display    : grid;
+    place-items: center;
+    font-size  : .6rem;
+    outline    : none;
+
+    >h4 {
+        color: $font_color;
+    }
+}
+
+#location {
+    width     : 80px;
+    height    : 15px;
+    font-size : .9em;
+    text-align: center;
+    border     : none;
+    background-color: $bg_color;
+    appearance: none;
+}

@@ -1,68 +1,29 @@
-* {
-	padding    : 0;
-	margin     : 0;
-	font-family: sans-serif;
-}
-
-img,
-iframe {
-	max-width: 100%;
-}
-
-header {
-	display       : grid;
-	grid-auto-flow: column;
-	place-items   : center;
-	padding       : 30px 5px;
-}
+@import 'global';
+@import 'color';
+@import 'header';
+@import 'footer';
 
 body {
-	background-color: rgba(230, 230, 230, 0.671);
+	background-color: $bg_color;
+	padding         : 0px 20px;
 }
 
 
-#logo>img {
-	width: 55%;
-}
-
-#logo {
-	display         : grid;
-	place-items     : center;
-	width           : 30px;
-	height          : 30px;
-	background-color: white;
-	border-radius   : 35%;
-}
-
-#profile {
-	display      : inline-block;
-	width        : 30px;
-	border-radius: 100%;
-}
-
-#location-container {
-	display    : grid;
-	place-items: center;
-	font-size  : .6rem;
-}
-
-
-
-
+// search bar
 .search-bar {
-	position : relative;
-	display  : flex;
-	min-width: 100px;
-	margin   : 20px;
+	position     : relative;
+	display      : flex;
+	min-width    : 100px;
+	margin-bottom: 20px;
 
 }
 
 .search {
 	border          : 1px solid white;
-	border-radius   : 10px;
-	height          : 30px;
+	border-radius   : 15px;
+	height          : 36px;
 	width           : 100%;
-	padding         : 2px 23px 2px 30px;
+	padding         : 2px 2px;
 	outline         : 0;
 	background-color: white;
 }
@@ -73,22 +34,204 @@ body {
 	background-color: white;
 }
 
+#search_icon {
+	position        : absolute;
+	display         : grid;
+	place-items     : center;
+	top             : 7px;
+	right           : 8px;
+	width           : 26px;
+	height          : 26px;
+	background-color: $search_color;
+	border-radius   : 37%;
+}
+
 .search-icon {
-	position: absolute;
-	top     : 6px;
-	right   : 8px;
-	width   : 14px;
+	width : 14px;
+	height: 14px;
 }
 
 
+.titles {
+	font-weight   : 800;
+	letter-spacing: -0.02em;
+	font-size     : .9em;
+	margin        : 30px 0px 10px;
+}
 
+// health apps 
+
+.health-apps {
+	display              : grid;
+	place-items          : center;
+	// grid: auto-flow dense / 80% 60px 1fr;
+	grid-template-columns: 1fr; 
+	width                : 100%;
+	row-gap              : 15px;
+
+	.health-title {
+		position : absolute;
+		font-size: .6em;
+		color    : $accent_color;
+		top      : 5px;
+		left     : 10px;
+	}
+
+	.health-display {
+		color    : $accent_color;
+		font-size: 2em;
+	}
+
+
+}
+
+.red {
+	background-image: $prim_color;
+}
+
+.turquoise {
+	background-image: $seco_color;
+}
+
+.orange {
+	background-image: $tert_color;
+}
+
+.health-big {
+	display       : grid;
+	grid-auto-flow: column;
+	place-items   : center;
+	position      : relative;
+	width         : 270px;
+	height        : 90px;
+	border-radius : 16px;
+	padding       : 5px;
+
+	>img {
+		height    : 60px;
+		width     : 90px;
+		object-fit: cover;
+	}
+}
+
+.health_apps_small {
+	display       : grid;
+	grid-auto-flow: column;
+	place-items   : center;
+	column-gap    : 14px;
+	width         : 100%;
+	font-size     : .6rem;
+
+	p {
+		color    : $accent_color;
+		font-size: .5em;
+	}
+
+	.health-title {
+		position : absolute;
+		font-size: .6em;
+		color    : $accent_color;
+		top      : 5px;
+		left     : 10px;
+	}
+}
+
+.health-small {
+	display       : grid;
+	grid-auto-flow: column;
+	place-items   : center;
+	position      : relative;
+	width         : 123px;
+	height        : 70px;
+	border-radius : 16px;
+	padding       : 5px;
+
+	>img {
+		height: 40px;
+	}
+}
+
+#health_display {
+	display      : grid;
+	align-items  : center;
+	justify-items: end;
+}
+
+// Nearby Doctors
+
+.divide {
+	display       : grid;
+	grid-auto-flow: column;
+
+	>a {
+		text-align: right;
+		margin    : 36px 0px 4px;
+		font-size : .7em;
+	}
+}
+
+.doctors {
+	display       : grid;
+	grid-auto-flow: column;
+	place-items   : center;
+	column-gap    : 15px;
+	width         : 100%;
+	overflow-x    : scroll;
+	overflow-y    : hidden;
+	margin-bottom : 80px;
+
+
+}
+
+.doctors::-webkit-scrollbar {
+	display: none;
+}
+
+
+.profile-photo {
+	border-radius: 25px;
+}
+
+.profile-name {
+	font-size  : .7em;
+	font-weight: 800;
+	padding    : 5px 8px 0px;
+}
+
+.profile-profession {
+	font-size  : .4em;
+	font-weight: bold;
+	color      : $font_color;
+	padding    : 0px 8px 5px;
+
+	~a {
+		font-size      : .5em;
+		font-weight    : bolder;
+		padding        : 0px 10px 15px;
+		text-decoration: none;
+
+		:visited {
+			color: black;
+		}
+	}
+}
+
+.chat_icon {
+	position: absolute;
+	bottom  : -10px;
+	right   : 0px;
+	width   : 25px;
+}
 
 .profile {
-	background-color: cadetblue;
-}
+	position        : relative;
+	display         : grid;
+	background-color: $accent_color;
+	width           : 110px;
+	border-radius   : 25px;
+	font-size       : .8rem;
 
-footer {
-	display              : grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	background-color     : burlywood;
+	img {
+		width: 100%;
+	}
 }

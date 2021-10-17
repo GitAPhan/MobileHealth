@@ -14,20 +14,14 @@ header {
   display: grid;
   grid-auto-flow: column;
   place-items: center;
-  padding: 30px 5px;
-}
-
-body {
-  background-color: rgba(230, 230, 230, 0.671);
-}
-
-#logo > img {
-  width: 55%;
+  padding: 35px 0px;
 }
 
 #logo {
   display: -ms-grid;
   display: grid;
+  -ms-grid-column-align: start;
+      justify-self: start;
   place-items: center;
   width: 30px;
   height: 30px;
@@ -35,7 +29,17 @@ body {
   border-radius: 35%;
 }
 
+#logo > img {
+  width: 55%;
+}
+
 #profile {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  height: 30px;
+}
+
+#profile > img {
   display: inline-block;
   width: 30px;
   border-radius: 100%;
@@ -46,6 +50,54 @@ body {
   display: grid;
   place-items: center;
   font-size: .6rem;
+  outline: none;
+}
+
+#location-container > h4 {
+  color: grey;
+}
+
+#location {
+  width: 80px;
+  height: 15px;
+  font-size: .9em;
+  text-align: center;
+  border: none;
+  background-color: rgba(230, 230, 230, 0.671);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 60px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: white;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+footer > a > img {
+  height: 20px;
+  display: block;
+}
+
+#home_icon {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+body {
+  background-color: rgba(230, 230, 230, 0.671);
+  padding: 0px 20px;
 }
 
 .search-bar {
@@ -54,15 +106,15 @@ body {
   display: -ms-flexbox;
   display: flex;
   min-width: 100px;
-  margin: 20px;
+  margin-bottom: 20px;
 }
 
 .search {
   border: 1px solid white;
-  border-radius: 10px;
-  height: 30px;
+  border-radius: 15px;
+  height: 36px;
   width: 100%;
-  padding: 2px 23px 2px 30px;
+  padding: 2px 2px;
   outline: 0;
   background-color: white;
 }
@@ -73,22 +125,212 @@ body {
   background-color: white;
 }
 
-.search-icon {
+#search_icon {
   position: absolute;
-  top: 6px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  top: 7px;
   right: 8px;
+  width: 26px;
+  height: 26px;
+  background-color: #00ddca;
+  border-radius: 37%;
+}
+
+.search-icon {
   width: 14px;
+  height: 14px;
+}
+
+.titles {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: .9em;
+  margin: 30px 0px 10px;
+}
+
+.health-apps {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  width: 100%;
+  row-gap: 15px;
+}
+
+.health-apps .health-title {
+  position: absolute;
+  font-size: .6em;
+  color: white;
+  top: 5px;
+  left: 10px;
+}
+
+.health-apps .health-display {
+  color: white;
+  font-size: 2em;
+}
+
+.red {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fb6d6d), to(#d30945));
+  background-image: linear-gradient(180deg, #fb6d6d, #d30945);
+}
+
+.turquoise {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#18fad4), to(#22cae0));
+  background-image: linear-gradient(180deg, #18fad4, #22cae0);
+}
+
+.orange {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7c559), to(#f18509));
+  background-image: linear-gradient(180deg, #f7c559, #f18509);
+}
+
+.health-big {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  position: relative;
+  width: 270px;
+  height: 90px;
+  border-radius: 16px;
+  padding: 5px;
+}
+
+.health-big > img {
+  height: 60px;
+  width: 90px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.health_apps_small {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  -webkit-column-gap: 14px;
+          column-gap: 14px;
+  width: 100%;
+  font-size: .6rem;
+}
+
+.health_apps_small p {
+  color: white;
+  font-size: .5em;
+}
+
+.health_apps_small .health-title {
+  position: absolute;
+  font-size: .6em;
+  color: white;
+  top: 5px;
+  left: 10px;
+}
+
+.health-small {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  position: relative;
+  width: 123px;
+  height: 70px;
+  border-radius: 16px;
+  padding: 5px;
+}
+
+.health-small > img {
+  height: 40px;
+}
+
+#health_display {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: end;
+}
+
+.divide {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.divide > a {
+  text-align: right;
+  margin: 36px 0px 4px;
+  font-size: .7em;
+}
+
+.doctors {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-bottom: 80px;
+}
+
+.doctors::-webkit-scrollbar {
+  display: none;
+}
+
+.profile-photo {
+  border-radius: 25px;
+}
+
+.profile-name {
+  font-size: .7em;
+  font-weight: 800;
+  padding: 5px 8px 0px;
+}
+
+.profile-profession {
+  font-size: .4em;
+  font-weight: bold;
+  color: grey;
+  padding: 0px 8px 5px;
+}
+
+.profile-profession ~ a {
+  font-size: .5em;
+  font-weight: bolder;
+  padding: 0px 10px 15px;
+  text-decoration: none;
+}
+
+.profile-profession ~ a :visited {
+  color: black;
+}
+
+.chat_icon {
+  position: absolute;
+  bottom: -10px;
+  right: 0px;
+  width: 25px;
 }
 
 .profile {
-  background-color: cadetblue;
-}
-
-footer {
+  position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-  background-color: burlywood;
+  background-color: white;
+  width: 110px;
+  border-radius: 25px;
+  font-size: .8rem;
+}
+
+.profile img {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

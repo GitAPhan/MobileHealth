@@ -14,7 +14,6 @@
 		<a id="logo" href="#"><img src="images/menu_icon.png" alt="menu icon"></a>
 		<div id="location-container">
 			<h4>Current Location</h4>
-			<form action="/action_page.php">
 				<label for="location"></label>
 				<select name="location" id="location">
 					<option>Calgary, AB</option>
@@ -22,66 +21,92 @@
 					<option>Toronto, ON</option>
 					<option>Montreal, QC</option>
 				</select>
-			</form>
+			
 		</div>
-		<a href="#"><img id="profile" src="http://placeskull.com/50/50" alt="profile icon"></a>
+		<a id="profile" href="#"><img src="http://placeskull.com/50/50" alt="profile icon"></a>
 
 	</header>
 
 	<div class="search-bar">
-		<div><img class="search-icon" src="images/Magnifying_glass_icon.png" /></div>
+		<div id="search_icon">
+			<img class="search-icon" src="images/Magnifying_glass_icon.png" />
+		</div>
 		<input class="search" placeholder="Search" type="text">
 	</div>
 
+	<H1 class="titles">Health Status</H1>
 	<section class="health-apps">
-		<H1 class="titles">Health Status</H1>
-		<div class="health-big">
+		<div class="health-big red">
 			<h3 class="health-title">Heart rate</h3>
-			<img src="" alt="heart rate line">
+			<img src="images/heartrate.png" alt="heart rate line">
 			<h4 class="health-display">73 bpm</h4>
 		</div>
-		<div class="health-small>
-			<h3 class=" health-title">Water Level</h3>
-			<img src="" alt="cup half-full icon">
+		<div class="health_apps_small">
+		<div class="health-small turquoise">
+			<h3 class="health-title">Water Level</h3>
+			<img src="images/glass_of_water.png" alt="cup half-full icon">
 			<h4 class="health-display">30 Cups</h4>
 		</div>
-		<div class="health-small">
+		<div class="health-small orange">
 			<h3 class="health-title">Temperature</h3>
-			<img src="" alt="thermometer icon">
-			<h4 class="health-display">23˚C</h4>
-			<p>Normal</p>
-		</div>
+			<img src="images/thermometer.png" alt="thermometer icon">
+			<div id="health_display"><h4 class="health-display">23˚C</h4>
+			<p>Normal</p></div>
+			<!-- weather widget start<a target="_blank" href="https://www.booked.net/weather/timbuktu-w652940"><img
+					src="https://w.bookcdn.com/weather/picture/21_w652940_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=569&anc_id=34044"
+					alt="booked.net" /></a> weather widget end -->
+		</div></div>
 	</section>
 
-	<section class="doctors">
+	<div class="divide">
 		<h1 class="titles">Nearby Doctors</h1>
+		<a href="#">All</a>
+	</div>
+	<section class="doctors">
+
 		<div class="profile">
-			<img class="profile-photo" src='https://dummyimage.com/100x100?text=person' alt='sample doctor' />
+			<img class="profile-photo" src='https://dummyimage.com/100x100/E27637/FFFFFF?text=person' alt='sample doctor' />
 			<h2 class="profile-name">Dr. Wang</h2>
 			<p class="profile-profession">Physiologist</p>
-			<a href="#">rating</a>
-			<a href="#">chat</a>
+			<a href="#">☆4.9</a>
+			<a class="chat_icon" href="#"><img src="https://www.cisco.com/c/dam/assets/cxlabs/images/cx-chat-icon.png" alt="chat icon"></a>
 		</div>
 
 		<div class="profile">
-			<img class="profile-photo" src='https://dummyimage.com/100x100?text=person' alt='sample doctor' />
+			<img class="profile-photo" src='https://dummyimage.com/100x100/FFA07A/FFFFFF?text=person' alt='sample doctor' />
 			<h2 class="profile-name">Dr. Lopez</h2>
 			<p class="profile-profession">Pythologist</p>
-			<a href="#">rating</a>
-			<a href="#">chat</a>
+			<a href="#">☆4.7</a>
+			<a class="chat_icon" href="#"><img src="https://www.cisco.com/c/dam/assets/cxlabs/images/cx-chat-icon.png" alt="chat icon"></a>
 		</div>
 
 		<div class="profile">
-			<img class="profile-photo" src='https://dummyimage.com/100x100?text=person' alt='sample doctor' />
+			<img class="profile-photo" src='https://dummyimage.com/100x100/927EF9/FFFFFF?text=person' alt='sample doctor' />
 			<h2 class="profile-name">Dr. Lucas</h2>
 			<p class="profile-profession">Cardiologist</p>
-			<a href="#">rating</a>
-			<a href="#"><img src="https://www.cisco.com/c/dam/assets/cxlabs/images/cx-chat-icon.png" alt=""></a>
+			<a href="#">☆4.8</a>
+			<a class="chat_icon" href="#"><img src="https://www.cisco.com/c/dam/assets/cxlabs/images/cx-chat-icon.png" alt="chat icon"></a>
+		</div>
+
+		<div class="profile">
+			<img class="profile-photo" src='https://dummyimage.com/100x100/C144B6/FFFFFF?text=person' alt='sample doctor' />
+			<h2 class="profile-name">Dr. Singh</h2>
+			<p class="profile-profession">Cardiologist</p>
+			<a href="#">☆4.3</a>
+			<a class="chat_icon" href="#"><img src="https://www.cisco.com/c/dam/assets/cxlabs/images/cx-chat-icon.png" alt="chat icon"></a>
+		</div>
+
+		<div class="profile">
+			<img class="profile-photo" src='https://dummyimage.com/100x100/8ec144/FFFFFF?text=person' alt='sample doctor' />
+			<h2 class="profile-name">Dr. Ma</h2>
+			<p class="profile-profession">Cardiologist</p>
+			<a href="#">☆4.0</a>
+			<a class="chat_icon" href="#"><img src="https://www.cisco.com/c/dam/assets/cxlabs/images/cx-chat-icon.png" alt="chat icon"></a>
 		</div>
 	</section>
 
 	<footer>
-		<a class="footer-icon" href="#"><img src="images/home_icon.png" alt="home icon"></a>
+		<a id="home_icon" class="footer-icon" href="#"><img src="images/home_icon.png" alt="home icon"></a>
 		<a class="footer-icon" href="#"><img src="images/calendar_icon.png" alt="calendar icon"></a>
 		<a class="footer-icon" href="#"><img src="images/chat_icon.png" alt="chat icon"></a>
 		<a class="footer-icon" href="#"><img src="images/settings-icon.png" alt="settings icon"></a>
