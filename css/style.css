@@ -14,7 +14,7 @@ header {
   display: grid;
   grid-auto-flow: column;
   place-items: center;
-  padding: 35px 0px;
+  padding: 35px 20px;
 }
 
 #logo {
@@ -71,8 +71,8 @@ header {
 
 footer {
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 0px;
+  right: 0px;
   height: 60px;
   display: -ms-grid;
   display: grid;
@@ -96,8 +96,130 @@ footer > a > img {
 }
 
 body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.body {
+  position: absolute;
   background-color: rgba(230, 230, 230, 0.671);
-  padding: 0px 20px;
+  max-width: 100%;
+  width: 100vw;
+  max-height: 100%;
+  position: relative;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.front_page {
+  position: absolute;
+  height: 101vh;
+  width: 101vw;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: white;
+  background-image: url(https://www.seekpng.com/png/full/46-465597_doctor-white-background-image-alignow-bunion-relief-pack.png);
+  background-size: 160%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  overflow: hidden;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  z-index: 3;
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+
+.front_page .front_page_top {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  justify-items: start;
+  width: 60vw;
+  padding: 20px;
+  font-size: 1.2em;
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+.front_page .front_page_top > p {
+  margin-top: 20px;
+  font-size: .5em;
+  font-weight: bold;
+}
+
+.front_page .front_page_title > H1 {
+  display: inline-block;
+  font-weight: 800;
+}
+
+.front_page .front_page_title :nth-child(2) {
+  color: turquoise;
+}
+
+.front_page_footer {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  width: 100%;
+  -ms-grid-row-align: end;
+      align-self: end;
+  height: 75px;
+  background-color: rgba(44, 44, 44, 0.137);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.front_page_footer .front_page_slogan {
+  color: white;
+  font-size: .9em;
+  padding: 0px 0px 0px 20px;
+  font-weight: bold;
+}
+
+.front_page_footer > a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  font-weight: 800;
+  width: 80px;
+  padding: 15px;
+  background-color: turquoise;
+  border-radius: 15px;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  margin-right: 25px;
+}
+
+#button {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  -webkit-transform: scaleY(0.5);
+          transform: scaleY(0.5);
+  right: 16px;
+  bottom: -30px;
+  opacity: 0.5;
+  z-index: 4;
+}
+
+#button:checked {
+  -webkit-transform: translateX(101vw);
+          transform: translateX(101vw);
+}
+
+#button:checked ~ .body {
+  overflow-y: scroll;
+}
+
+#button:checked ~ .body > .front_page {
+  -webkit-transform: translateX(101vw);
+          transform: translateX(101vw);
 }
 
 .search-bar {
@@ -106,7 +228,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   min-width: 100px;
-  margin-bottom: 20px;
+  margin: 20px;
 }
 
 .search {
@@ -114,7 +236,7 @@ body {
   border-radius: 15px;
   height: 36px;
   width: 100%;
-  padding: 2px 2px;
+  padding: 2px 20px;
   outline: 0;
   background-color: white;
 }
@@ -146,8 +268,8 @@ body {
 .titles {
   font-weight: 800;
   letter-spacing: -0.02em;
-  font-size: .9em;
-  margin: 30px 0px 10px;
+  font-size: 0.9em;
+  margin: 30px 20px 10px;
 }
 
 .health-apps {
@@ -156,13 +278,13 @@ body {
   place-items: center;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  width: 100%;
   row-gap: 15px;
+  padding: 20px;
 }
 
 .health-apps .health-title {
   position: absolute;
-  font-size: .6em;
+  font-size: 0.6em;
   color: white;
   top: 5px;
   left: 10px;
@@ -194,7 +316,7 @@ body {
   grid-auto-flow: column;
   place-items: center;
   position: relative;
-  width: 270px;
+  width: 100%;
   height: 90px;
   border-radius: 16px;
   padding: 5px;
@@ -212,20 +334,20 @@ body {
   display: grid;
   grid-auto-flow: column;
   place-items: center;
-  -webkit-column-gap: 14px;
-          column-gap: 14px;
+  -webkit-column-gap: 25px;
+          column-gap: 25px;
   width: 100%;
-  font-size: .6rem;
+  font-size: 0.6rem;
 }
 
 .health_apps_small p {
   color: white;
-  font-size: .5em;
+  font-size: 0.5em;
 }
 
 .health_apps_small .health-title {
   position: absolute;
-  font-size: .6em;
+  font-size: 0.6em;
   color: white;
   top: 5px;
   left: 10px;
@@ -237,7 +359,7 @@ body {
   grid-auto-flow: column;
   place-items: center;
   position: relative;
-  width: 123px;
+  width: 100%;
   height: 70px;
   border-radius: 16px;
   padding: 5px;
@@ -260,12 +382,13 @@ body {
   display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
+  padding: 0px 20px 0px 0px;
 }
 
 .divide > a {
   text-align: right;
   margin: 36px 0px 4px;
-  font-size: .7em;
+  font-size: 0.7em;
 }
 
 .doctors {
@@ -275,7 +398,7 @@ body {
   place-items: center;
   -webkit-column-gap: 15px;
           column-gap: 15px;
-  width: 100%;
+  margin: 20px;
   overflow-x: scroll;
   overflow-y: hidden;
   margin-bottom: 80px;
@@ -290,20 +413,20 @@ body {
 }
 
 .profile-name {
-  font-size: .7em;
+  font-size: 0.7em;
   font-weight: 800;
   padding: 5px 8px 0px;
 }
 
 .profile-profession {
-  font-size: .4em;
+  font-size: 0.4em;
   font-weight: bold;
   color: grey;
   padding: 0px 8px 5px;
 }
 
 .profile-profession ~ a {
-  font-size: .5em;
+  font-size: 0.5em;
   font-weight: bolder;
   padding: 0px 10px 15px;
   text-decoration: none;
@@ -327,7 +450,7 @@ body {
   background-color: white;
   width: 110px;
   border-radius: 25px;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .profile img {
